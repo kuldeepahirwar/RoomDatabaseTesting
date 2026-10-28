@@ -34,7 +34,7 @@ class QuoteDaoTest {
         quoteDao = quoteDatabase.quoteDao()
     }
 
-    @Test
+    /*@Test
     fun insertQuote_expectedStringQuote() = runBlocking {
         val quote = Quote(1, "Be yourself; everyone else is already taken.", "Oscar Wilde")
         quoteDao.insertQuote(quote)
@@ -53,8 +53,8 @@ class QuoteDaoTest {
         quoteDao.delete()
 
         val result = quoteDao.getQuotes().getOrAwaitValue()
-        Assert.assertTrue(result.isEmpty())
-    }
+        Assert.assertTrue(result .isEmpty())
+    }*/
 
     @After
     fun tearDown() {

@@ -58,4 +58,9 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.room.testing)
     androidTestImplementation(libs.androidx.arch.core.testing)
+
+    //Coroutine testing
+    testImplementation(libs.kotlinx.coroutines.test)
+
+    androidTestImplementation("app.cash.turbine:turbine:0.12.1")
 }

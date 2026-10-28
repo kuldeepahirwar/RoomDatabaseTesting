@@ -6,6 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import com.kuldeep.roomdatabasetesting.Quote
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface QuoteDao {
@@ -20,7 +21,7 @@ interface QuoteDao {
     suspend fun delete()
 
     @Query("SELECT * FROM Quote")
-    fun getQuotes(): LiveData<List<Quote>>
+    fun getQuotes(): Flow<List<Quote>>
 
     @Query("SELECT * FROM Quote WHERE id = :id")
     suspend fun getQuoteById(id: Int): Quote
